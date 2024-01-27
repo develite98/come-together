@@ -53,8 +53,9 @@
 			</button>
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group border-b hover:border-primary"
-				class:border-primary={$page.route.id === '/app/search'}
+				class="inline-flex grow flex-col items-center justify-center p-4 group border-b"
+				class:border-primary={$page.route.id === '/app/profile'}
+				on:click={() => goto('/app/profile')}
 			>
 				<svg
 					class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400"
