@@ -1,5 +1,5 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	goto('login');
+	goto('app/home');
 </script>

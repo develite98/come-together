@@ -3,3 +3,15 @@
 @tailwind utilities;
 
 @import './styles/button.scss';
+
+:root {
+	--primary-color: #fd7702;
+}
+
+.text-primary {
+	color: var(--primary-color);
+}
+
+.bg-second {
+	background-color: #003366;
+}

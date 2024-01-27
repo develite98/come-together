@@ -1,11 +1,11 @@
 <script>
-	import { List, ListGroup, ListItem, Searchbar } from 'konsta/svelte';
+	import { List, ListGroup, ListItem } from 'konsta/svelte';
 </script>
 
 <div class="grow overflow-auto w-screen flex flex-col items-start">
-	<div class="w-full p-4 sticky top-0 bg-white z-20">
+	<div class="w-full p-4 sticky top-0 z-20">
 		<div
-			class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden"
+			class="relative flex items-center w-full h-12 rounded-lg shadow-lg bg-white overflow-hidden"
 		>
 			<div class="grid place-items-center h-full w-12 text-gray-300">
 				<svg
