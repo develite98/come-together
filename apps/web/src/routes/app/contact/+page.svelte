@@ -2,8 +2,8 @@
 	import { List, ListGroup, ListItem } from 'konsta/svelte';
 </script>
 
-<div class="grow overflow-auto w-screen flex flex-col items-start">
-	<div class="w-full p-4 sticky top-0 z-20">
+<div class="w-screen flex flex-col items-start">
+	<div class="w-full p-4 sticky z-20 top-11">
 		<div
 			class="relative flex items-center w-full h-12 rounded-lg shadow-lg bg-white overflow-hidden"
 		>

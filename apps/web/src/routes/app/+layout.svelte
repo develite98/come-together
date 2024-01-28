@@ -4,20 +4,25 @@
 	import { onMount } from 'svelte';
 
 	let scrollElement: HTMLElement;
+	let mainElement: HTMLElement;
 	let headerTop: HTMLElement;
 	let headerHeight = 72;
 	let lastScrollTop = 0;
+	let scrollDelay = 0;
 
 	onMount(() => {
 		scrollElement.addEventListener('scroll', () => {
 			const scrollTop = scrollElement.scrollTop;
 			if (scrollTop < lastScrollTop) {
-				headerTop.style.opacity = `1`;
-				headerTop.style.height = `${headerHeight}px`;
+				scrollDelay += 1;
+				if (scrollDelay > 72) {
+					scrollDelay = 0;
+					headerTop.style.top = '0px';
+				}
 			} else {
-				headerTop.style.opacity = `0`;
-				headerTop.style.height = `${0}px`;
+				headerTop.style.top = '-72px';
 			}
+
 			lastScrollTop = scrollTop;
 		});
 	});
@@ -27,8 +32,8 @@
 	class="flex flex-col page h-screen mx-auto max-w-md login text-gray-600 overflow-auto"
 	bind:this={scrollElement}
 >
-	<div class="app-header">
-		<div class="app-header__top px-4 flex items-center justify-between" bind:this={headerTop}>
+	<div class="app-header" bind:this={headerTop}>
+		<div class="app-header__top px-4 flex items-center justify-between">
 			<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 540.3 88.7" width="180"
 				><style>
 					.st0 {
@@ -153,7 +158,7 @@
 		</div>
 	</div>
 
-	<div class="app-content">
+	<div class="app-content" bind:this={mainElement}>
 		<slot />
 	</div>
 </div>
@@ -166,20 +171,21 @@
 	}
 
 	.app-header {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		background: #ffffff;
-		z-index: 50;
-		margin-right: 10px;
+		position: sticky;
+		top: -72px;
+		background-color: #fff;
+		transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 
 	.app-header__top {
-		transition: all 0.3s ease-in;
-		height: 72px;
+		min-height: 72px;
+	}
+
+	.app-header__bottom {
+		background-color: #fff;
 	}
 
 	.app-content {
-		margin-top: 130px;
+		/* margin-top: 130px; */
 	}
 </style>
