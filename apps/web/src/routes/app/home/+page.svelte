@@ -1,113 +1,50 @@
 <script lang="ts">
-	const options: Intl.DateTimeFormatOptions = {
-		weekday: 'long',
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	};
+	import EventCard from '$lib/components/event-card.svelte';
 
 	let data = [
 		{
-			title: '',
+			title: 'Giao hữu bóng rổ HCMC',
 			date: new Date(),
-			level: 5
+			level: 1,
+			image: 'https://loremflickr.com/320/320/basketball/all',
+			slots: 20,
+			joined: 8
 		},
 		{
-			title: '',
+			title: 'Tranh cúp bóng rổ HCMC',
 			date: new Date(),
-			level: 5
+			level: 3,
+			image: 'https://loremflickr.com/320/320/basketball/all',
+			slots: 11,
+			joined: 2
 		},
 		{
-			title: '',
+			title: 'Luyện tập bóng rổ HCMC',
 			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
-		},
-		{
-			title: '',
-			date: new Date(),
-			level: 5
+			level: 2,
+			image: 'https://loremflickr.com/320/320/basketball',
+			slots: 15,
+			joined: 7
 		}
 	];
 </script>
 
 <div class="p-2 !pt-4 w-full home">
-	{#each data as item}
-		<div class="flex flex-col items-start rounded-xl bg-white p-4 shadow-lg mb-4">
-			<h2 class="font-semibold">
-				{item.date.toLocaleDateString('vi-VN', options)}
-			</h2>
-			<p class="mt-2 text-sm text-gray-500">Last opened 4 days ago</p>
-		</div>
+	<div
+		class="login-banner flex flex-col items-center justify-center rounded-xl overflow-hidden bg-white shadow-lg mb-8 p-4 mt-2"
+	>
+		<h2 class="text-xl font-semibold mb-2">Chào bạn mới</h2>
+		<span class="w-3/4 text-center mb-2">Tìm kiếm, tham gia trận đấu, sảng khoái bung sức mình</span
+		>
+		<button
+			class="text-white px-4 w-auto h-12 bg-primary rounded-lg touchable mouse shadow transition ease-in duration-200 focus:outline-none"
+		>
+			<span>Đăng nhập </span>
+		</button>
+	</div>
+	<div class="font-bold mb-2 ml-2">Gợi ý gần bạn</div>
+	{#each data as item, index}
+		<EventCard {item} {index}></EventCard>
 	{/each}
 </div>
 
@@ -134,4 +71,9 @@
 </div> -->
 
 <style lang="scss">
+	.login-banner {
+		height: 200px;
+		background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220217/pngtree-colorful-sports-theme-background-material-image_944423.jpg');
+		background-size: cover;
+	}
 </style>

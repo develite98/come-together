@@ -28,7 +28,7 @@
 				class="peer h-full w-full outline-none text-lg text-gray-700 pr-2"
 				type="text"
 				id="search"
-				placeholder="Type name, phone number.."
+				placeholder="Tìm kiếm số điện thoại, tên..."
 			/>
 		</div>
 	</div>
