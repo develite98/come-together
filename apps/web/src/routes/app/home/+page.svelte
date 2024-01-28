@@ -29,7 +29,7 @@
 	];
 </script>
 
-<div class="p-2 !pt-4 w-full home">
+<div class="p-4 !pt-4 w-full home">
 	<div
 		class="login-banner flex flex-col items-center justify-center rounded-xl overflow-hidden bg-white shadow-lg mb-8 p-4 mt-2"
 	>

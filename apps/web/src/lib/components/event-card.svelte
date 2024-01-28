@@ -51,13 +51,16 @@
 	</div>
 
 	<div class="p-4">
-		<h2 class="font-semibold text-gray-500">
+		<h2 class="font-medium text-gray-500">
 			{item.date.toLocaleDateString('vi-VN', options)}
 		</h2>
 
 		<h1 class="text-2xl mt-1 font-medium">{item.title}</h1>
 
-		<a href="#" class="flex items-center gap-2 mt-1 text-blue-600 dark:text-blue-500">
+		<a
+			href="#"
+			class="inline-flex flex-wrap items-center gap-2 mt-1 text-blue-600 dark:text-blue-500"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -77,7 +80,7 @@
 				</g>
 			</svg>
 
-			Sân vận động Thống Nhất - Xem địa điểm
+			Sân vận động Thống Nhất
 		</a>
 	</div>
 
