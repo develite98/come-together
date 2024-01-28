@@ -81,33 +81,18 @@
 		</a>
 	</div>
 
-	<div class="w-full flex items-center p-4 gap-2">
-		<div class="text-xl font-semibold flex gap-2 items-center">
-			<svg xmlns="http://www.w3.org/2000/svg" class="scale-90" width="24px" height="20px"
-				><g
-					transform="translate(1 1)"
-					stroke="#979797"
-					stroke-width="2"
-					fill="none"
-					fill-rule="evenodd"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					><path d="M15 18v-2a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v2" /><circle
-						cx="7.5"
-						cy="4"
-						r="4"
-					/><path d="m16 8 2 2 4-4" /></g
-				></svg
-			> <span>{item.joined} / {item.slots}</span>
+	<div class="w-full flex items-center p-4 gap-1">
+		<div class="text-lg font-semibold flex gap-2 items-center">
+			<span>{item.joined} / {item.slots}</span>
 		</div>
 		<button
-			class="ml-auto text-white px-4 w-auto h-12 bg-second rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none"
+			class="ml-auto text-white px-4 w-auto h-12 bg-second rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none text-sm"
 		>
 			<span>Theo dõi</span>
 		</button>
 
 		<button
-			class="text-white px-4 w-auto h-12 bg-primary rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none"
+			class="text-white px-4 w-auto h-12 bg-primary rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none text-sm"
 		>
 			<svg viewBox="0 0 20 20" enable-background="new 0 0 20 20" class="w-6 h-6 inline-block">
 				<path

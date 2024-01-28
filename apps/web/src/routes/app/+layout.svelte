@@ -88,17 +88,16 @@
 			</button>
 		</div>
 
-		<div
-			class="app-header__bottom border-b flex items-center justify-around border-gray-200 dark:bg-gray-700 dark:border-gray-600"
-		>
+		<div class="app-header__bottom border-b flex items-center justify-around border-gray-200">
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group border-b"
+				class="inline-flex grow flex-col items-center justify-center p-4 group"
+				class:border-b={$page.route.id === '/app/home'}
 				class:border-primary={$page.route.id === '/app/home'}
 				on:click={() => goto('/app/home')}
 			>
 				<svg
-					class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400"
+					class="w-5 h-5 mb-1 text-gray-500"
 					class:text-primary={$page.route.id === '/app/home'}
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
@@ -113,12 +112,13 @@
 			</button>
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group border-b hover:border-primary"
+				class="inline-flex grow flex-col items-center justify-center p-4 group"
 				class:border-primary={$page.route.id === '/app/contact'}
+				class:border-b={$page.route.id === '/app/contact'}
 				on:click={() => goto('/app/contact')}
 			>
 				<svg
-					class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400"
+					class="w-5 h-5 mb-1 text-gray-500"
 					class:text-primary={$page.route.id === '/app/contact'}
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
@@ -133,13 +133,15 @@
 			</button>
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group border-b"
+				class="inline-flex grow flex-col items-center justify-center p-4 group"
 				class:border-primary={$page.route.id === '/app/profile'}
+				class:border-b={$page.route.id === '/app/profile'}
 				on:click={() => goto('/app/profile')}
 			>
 				<svg
-					class="w-6 h-6 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+					class="w-6 h-6 text-gray-500"
 					aria-hidden="true"
+					class:text-primary={$page.route.id === '/app/profile'}
 					xmlns="http://www.w3.org/2000/svg"
 					fill="currentColor"
 					viewBox="0 0 20 20"
