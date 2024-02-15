@@ -7,6 +7,7 @@
 			date: new Date(),
 			level: 1,
 			image: 'https://loremflickr.com/320/320/basketball/all',
+			avatar: 'https://loremflickr.com/64/64/basketball/all',
 			slots: 20,
 			joined: 8
 		},
@@ -15,6 +16,7 @@
 			date: new Date(),
 			level: 3,
 			image: 'https://loremflickr.com/320/320/basketball/all',
+			avatar: 'https://loremflickr.com/64/64/basketball/all',
 			slots: 11,
 			joined: 2
 		},
@@ -23,6 +25,7 @@
 			date: new Date(),
 			level: 2,
 			image: 'https://loremflickr.com/320/320/basketball',
+			avatar: 'https://loremflickr.com/64/64/basketball/all',
 			slots: 15,
 			joined: 7
 		}

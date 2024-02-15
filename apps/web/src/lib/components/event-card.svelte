@@ -6,6 +6,7 @@
 		level: number;
 		image: string;
 		slots: number;
+		avatar: string;
 		joined: number;
 	};
 
@@ -20,13 +21,18 @@
 	};
 </script>
 
-<div class="flex flex-col items-start rounded-xl overflow-hidden bg-white shadow-lg mb-6 relative">
-	<div
-		class="absolute top-2 left-2 px-2 py-1 rounded-lg text-white min-w-10"
-		style="background-color: {levelColors[item.level - 1]};"
-	>
-		Cấp {levels[item.level - 1]}
+<div
+	class="flex flex-col items-start rounded-xl overflow-hidden bg-white shadow-lg border border-gray-200 mb-6 relative"
+>
+	<div class="flex gap-3 px-4 py-3 items-center">
+		<img class="w-10 h-10 rounded-full" src={item.avatar + '?random=' + index} alt="Avatar" />
+		<div class="text-sm">
+			<span class="font-semibold text-gray-500">Nguyễn Thành Công</span>
+			<br />
+			<span>34 phút</span>
+		</div>
 	</div>
+
 	<div class="flex w-full items-center justify-center h-48 bg-gray-300 dark:bg-gray-700">
 		{#if !item.image}
 			<svg
@@ -51,11 +57,18 @@
 	</div>
 
 	<div class="p-4">
-		<h2 class="font-medium text-gray-500">
+		<h2 class="text-gray-500 text-base">
 			{item.date.toLocaleDateString('vi-VN', options)}
 		</h2>
 
-		<h1 class="text-2xl mt-1 font-medium">{item.title}</h1>
+		<h1 class="text-xl font-medium">{item.title}</h1>
+
+		<div
+			class="w-fit top-2 left-2 px-2 text-xs py-1 mt-2 rounded-lg text-white min-w-10"
+			style="background-color: {levelColors[item.level - 1]};"
+		>
+			Cấp {levels[item.level - 1]}
+		</div>
 
 		<a
 			href="#"

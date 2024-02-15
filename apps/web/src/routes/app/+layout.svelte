@@ -91,7 +91,7 @@
 		<div class="app-header__bottom border-b flex items-center justify-around border-gray-200">
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group"
+				class="inline-flex grow flex-col items-center justify-center p-2 group"
 				class:border-b={$page.route.id === '/app/home'}
 				class:border-primary={$page.route.id === '/app/home'}
 				on:click={() => goto('/app/home')}
@@ -112,7 +112,7 @@
 			</button>
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group"
+				class="inline-flex grow flex-col items-center justify-center p-2 group"
 				class:border-primary={$page.route.id === '/app/contact'}
 				class:border-b={$page.route.id === '/app/contact'}
 				on:click={() => goto('/app/contact')}
@@ -133,7 +133,7 @@
 			</button>
 			<button
 				type="button"
-				class="inline-flex grow flex-col items-center justify-center p-4 group"
+				class="inline-flex grow flex-col items-center justify-center p-2 group"
 				class:border-primary={$page.route.id === '/app/profile'}
 				class:border-b={$page.route.id === '/app/profile'}
 				on:click={() => goto('/app/profile')}
