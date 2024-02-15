@@ -102,13 +102,13 @@
 			<span>{item.joined} / {item.slots}</span>
 		</div>
 		<button
-			class="ml-auto text-white px-4 w-auto h-12 bg-second rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none text-sm"
+			class="ml-auto text-white px-3 w-auto h-10 bg-second rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none text-sm"
 		>
 			<span>Theo dõi</span>
 		</button>
 
 		<button
-			class="text-white px-4 w-auto h-12 bg-primary rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none text-sm"
+			class="text-white px-3 w-auto h-10 bg-primary rounded-full touchable mouse shadow transition ease-in duration-200 focus:outline-none text-sm"
 		>
 			<svg viewBox="0 0 20 20" enable-background="new 0 0 20 20" class="w-6 h-6 inline-block">
 				<path
